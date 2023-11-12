@@ -115,7 +115,9 @@
       </div>
     </div>
     <div v-else>
-      <p class="text-center py-52 md:py-0 md:p-24">
+      <p
+        class="text-center text-md md:text-lg lg:text-2xl py-48 md:py-[14.4rem] w-full h-full"
+      >
         fetching weather information...
       </p>
     </div>
@@ -165,13 +167,13 @@ export default {
         } else {
           return {
             'background-image':
-              "url('https://source.unsplash.com/random/900x700')",
+              "url('https://source.unsplash.com/random/900x700/?clouds')",
           }
         }
       } else {
         return {
           'background-image':
-            "url('https://source.unsplash.com/random/900x700')",
+            "url('https://source.unsplash.com/random/900x700/?clouds')",
         }
       }
     },
@@ -198,7 +200,7 @@ export default {
 
 <style>
 .background-container {
-  background-image: url('https://source.unsplash.com/random/900x700/?indonesia');
+  background-image: url('https://source.unsplash.com/random/900x700/?clouds');
   background-size: cover;
   background-position: center;
   color: #fff;
