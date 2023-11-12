@@ -1,16 +1,18 @@
 <template>
   <div
-    class="background-container py-20 font-montserrat max-w-full"
+    class="background-container py-5 sm:py-10 font-montserrat w-full h-full bg-cover bg-left bg-fixed md:py-36 lg:py-44"
     :style="dynamicBackground"
   >
-    <div v-if="weatherData" class="px-4 md:px-20 max-w-full">
+    <div v-if="weatherData" class="px-4 sm:px-10 md:px-20 w-full">
       <div
         class="py-5 backdrop-blur-sm bg-neutral-400/50 px-4 rounded-lg md:bg-black/30 md:float-right md:w-1/2"
       >
         <div>
-          <p class="text-xl pb-3 md:text-2xl lg:text-4xl">Current Weather</p>
-          <div class="grid grid-cols-3 md:py-6">
-            <div class="leading-8">
+          <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl">
+            Current Weather
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 py-4">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -20,7 +22,7 @@
                 {{ weatherData.name }}
               </p>
             </div>
-            <div class="leading-8 md:text-lg lg:text-xl">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -30,7 +32,7 @@
                 {{ convertUnixToTime(weatherData.sys.sunrise) }}
               </p>
             </div>
-            <div class="leading-8">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -40,9 +42,7 @@
                 {{ convertUnixToTime(weatherData.sys.sunset) }}
               </p>
             </div>
-          </div>
-          <div class="grid grid-cols-3 md:py-6">
-            <div class="leading-8">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -52,7 +52,7 @@
                 {{ kelvinToCelsius(weatherData.main.feels_like) }}°C
               </p>
             </div>
-            <div class="leading-8">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -62,7 +62,7 @@
                 {{ kelvinToCelsius(weatherData.main.temp_max) }}°C
               </p>
             </div>
-            <div class="leading-8">
+            <div class="leading-10 pb-3">
               <p
                 class="text-xs text-black/50 font-semibold sm:text-sm md:text-base lg:text-lg"
               >
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="pt-20 md:pt-0 md:py-20 lg:py-[11.2rem]">
+      <div class="pt-10 sm:pt-15 md:pt-20 lg:py-28">
         <div>
           <div class="lg:flex">
             <p class="text-5xl md:text-6xl lg:text-[4rem]">
@@ -201,8 +201,6 @@ export default {
 <style>
 .background-container {
   background-image: url('https://source.unsplash.com/random/900x700/?clouds');
-  background-size: cover;
-  background-position: center;
   color: #fff;
 }
 </style>
